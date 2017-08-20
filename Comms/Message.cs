@@ -48,42 +48,56 @@ namespace Comms
                 switch (dat.type)
                 {
                     case Data.INT:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_int));
                         break;
                     case Data.UINT:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_uint));
                         break;
                     case Data.SHORT:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_short));
                         break;
                     case Data.USHORT:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_ushort));
                         break;
                     case Data.FLOAT:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_float));
                         break;
                     case Data.DOUBLE:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_double));
                         break;
                     case Data.LONG:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_long));
                         break;
                     case Data.ULONG:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_ulong));
                         break;
                     case Data.BOOL:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_bool));
                         break;
                     case Data.BYTE:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_byte));
                         break;
                     case Data.SBYTE:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_sbyte));
                         break;
                     case Data.CHAR:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
                         messageContents.Add(BitConverter.GetBytes(dat.data_char));
                         break;
                     case Data.STRING:
+                        messageContents.Add(BitConverter.GetBytes(dat.infoType));
+                        messageContents.Add(BitConverter.GetBytes(dat.data_string.Length));
                         messageContents.Add(Encoding.ASCII.GetBytes(dat.data_string));
                         break;
                     default:
