@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Comms
+﻿namespace Comms
 {
     /// <summary>
     /// Container for primitive types with identifiers for use in packets
@@ -19,7 +13,9 @@ namespace Comms
         public const ushort IT_TimeSeconds       = 4;  // int         : Seconds when packet was sent
         public const ushort IT_TimeMilliseconds  = 5;  // int         : Milliseconds when packet was sent
         public const ushort IT_Username          = 6;  // string      : Username for login auth
-        public const ushort IT_Password          = 7;  // string      : Hashed password for login auth 
+        public const ushort IT_Password          = 7;  // string      : Hashed password for login auth
+        public const ushort IT_TextMessage       = 8;
+        public const ushort IT_ConnectServiceIP  = 9;  // string      : IP Address for Connect service provided by Auth server
         #endregion
         #region Primitive Types
         public const byte INT     = 0;

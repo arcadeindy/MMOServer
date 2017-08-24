@@ -1,0 +1,9 @@
+C:\Users\Jeremy\source\repos\MMOServer\TestClient\obj\Debug\TestClient.csproj.CoreCompileInputs.cache
+C:\Users\Jeremy\source\repos\MMOServer\TestClient\bin\Debug\TestClient.exe.config
+C:\Users\Jeremy\source\repos\MMOServer\TestClient\bin\Debug\TestClient.exe
+C:\Users\Jeremy\source\repos\MMOServer\TestClient\bin\Debug\TestClient.pdb
+C:\Users\Jeremy\source\repos\MMOServer\TestClient\bin\Debug\Comms.dll
+C:\Users\Jeremy\source\repos\MMOServer\TestClient\bin\Debug\Comms.pdb
+C:\Users\Jeremy\source\repos\MMOServer\TestClient\obj\Debug\TestClient.csprojResolveAssemblyReference.cache
+C:\Users\Jeremy\source\repos\MMOServer\TestClient\obj\Debug\TestClient.exe
+C:\Users\Jeremy\source\repos\MMOServer\TestClient\obj\Debug\TestClient.pdb

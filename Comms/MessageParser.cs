@@ -11,6 +11,11 @@ namespace Comms
     /// </summary>
     public static class MessageParser
     {
+        /// <summary>
+        /// Parse byte[] from incoming packets
+        /// </summary>
+        /// <param name="message">The body of the incoming packet</param>
+        /// <returns>Array of parsed data</returns>
         public static Data[] ParseMessage(byte[] message)
         {
             List<Data> data = new List<Data>();
@@ -32,6 +37,14 @@ namespace Comms
                     {
                         case Data.INT:
                             int dataInt = BitConverter.ToInt32(message, index);
+
+                            if(type == 0 && infoType == 0 && dataInt == 0)
+                            {
+                                index += 4;
+                                //Discard empty/incorrect data
+                                break;
+                            }
+
                             data.Add(new Data(type, infoType, dataInt));
                             index += 4;
                             break;
@@ -92,6 +105,7 @@ namespace Comms
                             break;
                         case Data.STRING:
                             int len = BitConverter.ToInt32(message, index);
+                            index += 4;
                             string dataString = Encoding.Default.GetString(message, index, len);
                             index += len;
                             data.Add(new Data(Data.STRING, infoType, dataString));
@@ -100,7 +114,6 @@ namespace Comms
                             //Throw unknown data exception
                             break;
                     }
-
                 }
             }
             catch(Exception e) { }

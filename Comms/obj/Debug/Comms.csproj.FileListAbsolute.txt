@@ -1,0 +1,6 @@
+C:\Users\Jeremy\source\repos\MMOServer\Comms\bin\Debug\Comms.dll
+C:\Users\Jeremy\source\repos\MMOServer\Comms\bin\Debug\Comms.pdb
+C:\Users\Jeremy\source\repos\MMOServer\Comms\obj\Debug\Comms.csproj.CoreCompileInputs.cache
+C:\Users\Jeremy\source\repos\MMOServer\Comms\obj\Debug\Comms.dll
+C:\Users\Jeremy\source\repos\MMOServer\Comms\obj\Debug\Comms.pdb
+C:\Users\Jeremy\source\repos\MMOServer\Comms\obj\Debug\Comms.csprojResolveAssemblyReference.cache

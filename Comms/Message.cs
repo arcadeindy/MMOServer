@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 
 namespace Comms
@@ -12,18 +11,14 @@ namespace Comms
     /// </summary>
     public class Message
     {
-        public IPAddress destination;
         public Data[] data;
 
         /// <summary>
         /// Class constructor
         /// </summary>
-        /// <param name="type">Type of message, select from SC_x, CS_x, or SS_x variables in this class</param>
-        /// <param name="destination">Destination IP address for the packet</param>
         /// <param name="data">Array of packet data</param>
-        public Message(IPAddress destination, Data[] data)
+        public Message(Data[] data)
         {
-            this.destination = destination;
             this.data = data;
         }
 
@@ -39,10 +34,10 @@ namespace Comms
             messageContents.Add(s);
             messageContents.Add(ms);
 
-            for(ushort i = 0; i < data.Length; i++)
+            for(int i = 0; i < data.Length; i++)
             {
                 Data dat = data[i];
-                messageContents.Add(BitConverter.GetBytes(dat.type));
+                messageContents.Add(new byte[] { dat.type });
 
                 //Add to messageContents based on primitive type
                 switch (dat.type)
@@ -105,6 +100,14 @@ namespace Comms
                 }
             }
 
+            /*IEnumerable<byte> result = Enumerable.Empty<byte>();
+
+            foreach(byte[] bytes in messageContents)
+            {
+                result = result.Concat(bytes);
+            }
+
+            return result.ToArray();*/
             return messageContents.SelectMany(a => a).ToArray();
         }
     }
